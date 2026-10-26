@@ -1,0 +1,149 @@
+Lab 10: Word Clouds
+In this (two part) lab, you will practice using Collections and create a class that generates word clouds, which are visualizations of word frequencies in a given piece of text.
+
+Learning Objectives
+After completing this lab, you should be able to:
+
+Use collections to store information about text.
+Read and parse the contents of a plain text file.
+Implement interfaces in the java.lang package.
+Determine how to utilize a third-party library.
+Background
+A word cloud is a visualization of a bunch of text. See for examples.
+
+The core part of a word cloud is a "frequency table," aka a mapping of each word to the number of times it appears in the given text. For example, consider the frequency table from our CS major description:
+
+In the corresponding word cloud, more frequent words appear large, and less frequent words appear small:
+
+One need that arises when generating word clouds is combining related words. For example, the words devoured, devourers, devouring, and devours are all based on the root term devour. We'd want to group these words together in a word cloud, instead of treating them as individual words.
+
+Fortunately, Dr. Martin Porter developed a "stemming" algorithm about 40 years ago that does this part for you. The tricky part is, that's someone else's code you'll need to read through and figure out how to use! A large part of computer science is working with other people's code, which could be well-documented, or not documented at all.
+
+Today's Lab
+For this lab, you will implement a WordCloud class that maintains a collection of terms (root words) and the number of words that correspond to each term. The Stemmer class from will help you convert original words into these terms.
+
+Starter Code
+Download and extract its contents to. It contains the following files:
+
+WordCloud java Contains stubs for the methods you will need to implement.
+Stemmer java The code for the stemming algorithm. You do not need to modify this class, just use it.
+WordCloudDriver java Run this code to create a word cloud in an HTML file that you can open in your browser!
+data/ easy.txt A sample file with a few words that you can use to test
+data/ hard.txt A sample file with the text from this lab that you can use to test
+UML Diagram
+
+Notice that the UML diagram above is incomplete! We will have some methods that must be implemented, but you will need to determine what attributes and other helper methods will be necessary for WordCloud.
+
+Think carefully about what needs to be stored. Avoid storing data that isn't needed, and don't store the same data more than once.
+
+Stemmer Class
+The Stemmer class is responsible for converting words to their base terms (i.e., "devoured" to "devour"). You will need to figure out how to use the Stemmer class. The easiest way is to look at the source code. Try to figure out which methods you need to call (don't copy and paste any code from Stemmer)!
+
+JavaDocs?
+
+You'll find that Stemmer lacks proper JavaDocs, has very few code comments, and follows a different style. It may be tricky to figure out what each method does, or what the arguments do. This is why we have you write JavaDocs and follow a style guide. It makes the code more readable/ usable by others! You'll rarely ever write code just for yourself in the real world.
+
+Instructions
+Implement the WordCloud class. This class stores the number of words that correspond to each term. It has methods to add words, remove words, get the frequency of each term, etc. It also implements a couple of interfaces that makes it easier for other classes to use it.
+
+We recommend you follow the following requirements, in order:
+
+Attributes and Constructor:
+Read through the stubbed WordCloud class and think about what a WordCloud needs to store/ keep track of:
+
+Each term, with the number of words that correspond to the term.
+You need to be able to get/ set the frequency for each term.
+You will also need to display the terms in alphabetical order.
+What collection(s) would be best for this?
+Add private attribute(s) to the WordCloud class based on your answer.
+
+There are multiple ways to solve this lab, so you may have 1 or more attributes depending on your approach.
+Some approaches are better than others, and will save you work later on!
+Implement the constructor to initialize the class's attributes.
+
+Initially, a WordCloud should have no terms/ words.
+Base Functionality:
+public void add (String word)
+
+Updates the frequency of a term, based on the given word.
+(Hint: If this is the first time you've seen this term, what should be its frequency? If you've already seen it, how should you update its frequency?)
+The given word should be normalized to a term before storing it in the WordCloud (use the normalize() method, which returns a term from a given word).
+You do not need to implement normalize() just yet- we can save that for later.
+Right now, normalize() just returns the same word passed in.
+public int addAll (String path) throws FileNotFoundException
+
+Adds all the terms in the given file to the word cloud.
+This should read the file word by word, and add each word.
+This method also returns the total number of words read/ added.
+This method must throw a FileNotFoundException if the given path is not found.
+public int getFrequency (String term)
+
+Returns the frequency/ word count for a given term in the word cloud.
+If the term is not in the word cloud, return 0.
+public int termCount()
+
+Returns the number of unique terms in the word cloud.
+public int totalWordCount()
+
+Returns the total number of words in the word cloud (aka the total frequency that each term appears).
+Run WordCloudDriver to test this functionality!
+
+You should see that 611 terms and 1561 words were added to the word cloud.
+Removing Terms:
+public int remove (String word)
+
+Completely removes a term from the word cloud, based on the given word.
+The given word should be normalized to a term as well, using normalize().
+Returns the number of words removed for that term, or 0 if not found.
+public int removeAllLessThan (int threshold)
+
+Removes all terms with a frequency less than the threshold.
+Returns the total number of words removed.
+You will need to loop over your collection(s) using an Iterator and call the Iterator's remove() method.
+This is because modifying a collection while looping over it can result in a ConcurrentModificationException!
+Modify WordCloudDriver to test this functionality!
+
+Uncomment the code after "Test removing" and then run WordCloudDriver.
+It should remove 92 instances of "the", and 417 terms with frequency less than 2.
+Generating HTML Output:
+public String generateHTML()
+
+Generates HTML code (which is what webpages use) for displaying the word cloud. Each term is a "span" with a "font-size" that corresponds to the count. Terms must be in alphabetical order.
+For example, a WordCloud that contains the words [bb, aa, cc, cc, bb] would return the following string:
+
+Notice there is a newline character at the end of each line.
+Modify WordCloudDriver to test this functionality!
+
+Uncomment the code after "Generate HTML file" and then run WordCloudDriver.
+It should create an HTML file in the data folder. You can open the HTML file in a browser to see the generated word cloud (you may need to zoom in).
+Normalizing Words with the Stemmer:
+Read through the code in Stemmer.java to understand how to use it.
+
+public static String normalize (String word)
+
+Normalizes a given word by removing punctuation, making it lowercase, and running the Porter stemming algorithm.
+Punctuation is defined as any character that is not a letter or digit.
+For example, both normalize ("coding") and normalize ("Cod-Ing...") should return the term "code".
+Make sure that you are using normalize() to normalize the word in both add() and remove(). All the terms in the word cloud should be normalized.
+
+Run WordCloudDriver to test this functionality!
+
+You should have the same number of words, but fewer terms.
+There should now be 363 total terms and 1561 total words.
+Open the HTML file in a browser to see the generated word cloud.
+You should find that all the words are now lowercase, and there is no punctuation.
+Implementing Comparable and Iterable Interfaces:
+Change the declaration of WordCloud to implement two interfaces: it must be comparable with other WordCloud objects (Comparable <WordCloud>), and it must be iterable over the words that it contains (Iterable <String>).
+
+Don't forget to include the appropriate types inside the angle brackets! Otherwise, you will implement the "generic" version of each interface, which uses Object as the default type.
+public int compareTo (WordCloud wc)
+
+Returns a negative integer, zero, or a positive integer depending on whether this object has fewer, the same, or more terms than wc.
+This is required for the Comparable interface.
+public Iterator <String> iterator()
+
+Returns an iterator that can go through each term in the WordCloud, in alphabetical order.
+This is required for the Iterable interface.
+(Hint: Don't "create" a new iterator, just return one that does what the method wants. Can you call a method on one of your attributes to get an appropriate iterator?)
+Submission
+Submit your WordCloud.java file to Gradescope. Your submission must pass a checkstyle audit to receive any points.

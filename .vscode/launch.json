@@ -1,0 +1,294 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Triangles",
+            "request": "launch",
+            "mainClass": "acts.act14.Triangles",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "VeeTree",
+            "request": "launch",
+            "mainClass": "acts.act14.VeeTree",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Drawing",
+            "request": "launch",
+            "mainClass": "acts.act14.Drawing",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Results",
+            "request": "launch",
+            "mainClass": "hws.hw9.Results",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Analyst",
+            "request": "launch",
+            "mainClass": "hws.hw9.Analyst",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "HighWins",
+            "request": "launch",
+            "mainClass": "hws.hw9.HighWins",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "LowWins",
+            "request": "launch",
+            "mainClass": "hws.hw9.LowWins",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Standing",
+            "request": "launch",
+            "mainClass": "hws.hw9.Standing",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Dot",
+            "request": "launch",
+            "mainClass": "hws.hw8.Dot",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "WordCloudDriver",
+            "request": "launch",
+            "mainClass": "labs.lab10.WordCloudDriver",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Enemy",
+            "request": "launch",
+            "mainClass": "hws.hw8.Enemy",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Aisle",
+            "request": "launch",
+            "mainClass": "labs.lab08.Aisle",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Conway",
+            "request": "launch",
+            "mainClass": "labs.lab09.Conway",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Player",
+            "request": "launch",
+            "mainClass": "hws.hw8.Player",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "MagicEgg",
+            "request": "launch",
+            "mainClass": "hws.hw8.MagicEgg",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "GameDriver",
+            "request": "launch",
+            "mainClass": "hws.hw8.GameDriver",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "MartDriver",
+            "request": "launch",
+            "mainClass": "labs.lab08.MartDriver",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "acts.act11.Main",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Gallery",
+            "request": "launch",
+            "mainClass": "hws.hw7.Gallery",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "MartDriver",
+            "request": "launch",
+            "mainClass": "labs.lab07.MartDriver",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Child",
+            "request": "launch",
+            "mainClass": "acts.act10.Child",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Model2",
+            "request": "launch",
+            "mainClass": "acts.Model2",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "IMDb",
+            "request": "launch",
+            "mainClass": "IMDb",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "ScannerDemo",
+            "request": "launch",
+            "mainClass": "ScannerDemo",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "User",
+            "request": "launch",
+            "mainClass": "User",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "demo.HelloWorld",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "SwapDriver",
+            "request": "launch",
+            "mainClass": "SwapDriver",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "WordCount",
+            "request": "launch",
+            "mainClass": "hws.hw3.WordCount",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "BasicStatistics",
+            "request": "launch",
+            "mainClass": "hws.hw3.BasicStatistics",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "ScrabbleWords",
+            "request": "launch",
+            "mainClass": "hws.hw3.ScrabbleWords",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "NiftySpelling",
+            "request": "launch",
+            "mainClass": "hws.hw3.NiftySpelling",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "CollatzConjecture",
+            "request": "launch",
+            "mainClass": "hws.hw2.CollatzConjecture",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "InterstateNumbers",
+            "request": "launch",
+            "mainClass": "hws.hw2.InterstateNumbers",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "ExactChange",
+            "request": "launch",
+            "mainClass": "hws.hw2.ExactChange",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "BakingBread",
+            "request": "launch",
+            "mainClass": "hws.hw1.BakingBread",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "MadisonQuotes",
+            "request": "launch",
+            "mainClass": "hws.hw1.MadisonQuotes",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "FightSong",
+            "request": "launch",
+            "mainClass": "hws.hw1.FightSong",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Percent",
+            "request": "launch",
+            "mainClass": "labs.lab01.Percent",
+            "projectName": "CS159_8022906d"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "shortenCommandLine": "none",
+            "stepFilters": {
+                "skipClasses": [
+                    "$JDK",
+                    "$Libraries"
+                ],
+                "skipSynthetics": false,
+                "skipStaticInitializers": false,
+                "skipConstructors": false
+            }
+        }
+    ]
+}
